@@ -1,0 +1,91 @@
+
+body {
+    padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+}
+
+footer {
+    margin: 50px 0;
+}
+
+.banner-top {
+	padding-bottom: 20px;
+}
+
+.article-thumbnail {
+	float: left;
+	padding: 10px;
+}
+
+.item-list:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+* html .item-list             { zoom: 1; } /* IE6 */
+*:first-child+html .item-list { zoom: 1; } /* IE7 */
+
+.adsense-banner-bottom {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.tags-links {
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+
+.tags-links a {
+    border-color: transparent;
+    padding: 0.3rem 0.5rem;
+    border: 1px solid #D1D1E8;
+}
+
+.entry-meta .author{
+	background:  url("/theme/images/author.png") no-repeat left 2px;
+	padding-left: 20px;
+	margin-right: 14px;
+}
+
+.archive-author-info .author-avatar{
+	float:left;
+	width: 80px;
+}
+
+.archive-author-info .avatar{
+	margin-right: 10px;
+}
+
+.archive-author-info .author-info{
+	background: #EEEEEE;
+	padding: 5px 7px;
+}
+
+.entry-author{
+	margin-bottom: 20px;
+	overflow: hidden;
+	background: #F4F4F4;
+	padding: 10px;
+}
+
+.entry-author h3{
+	margin-bottom: 5px;
+}
+
+.entry-author .author-avatar{
+	float:left;
+	width: 80px;
+	margin-top: 5px;
+}
+
+.entry-author .avatar{
+	margin-right: 10px;
+}
+
+ p {
+ 	text-align: justify;
+ 	font-size: 16px;
+ }

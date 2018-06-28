@@ -1,0 +1,32 @@
+language: python
+python:
+  - "3.5"
+sudo: required
+branches:
+  only:
+  - master
+before_install:
+  - echo "Configure locale"
+  - sudo locale-gen pt_BR pt_BR.UTF-8
+  - sudo dpkg-reconfigure locales
+  - LC_TIME=pt_BR.utf-8
+  - date
+  - locale -a
+install:
+  - pip install --upgrade pip
+  - pip install -r requirements.txt
+script:
+  - make publish
+deploy:
+    provider: s3
+    access_key_id: $AWS_ACCESS_KEY # declared in Travis repo settings
+    secret_access_key: $AWS_SECRET_KEY
+    bucket: dicasdepython.com.br
+    region: sa-east-1
+    skip_cleanup: true
+    local-dir: output
+    acl: public_read
+    detect_encoding: false
+notifications:
+    email:
+        on_failure: always

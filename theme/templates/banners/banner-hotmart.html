@@ -1,0 +1,6 @@
+
+{% if article and AUTHORS[article.author|string] %}
+{% include AUTHORS[article.author|string].hotmart %}
+{% else %}
+{% include DEFAULT_HOTMART %}
+{% endif %}
