@@ -80,9 +80,9 @@ SUMMARY_MAX_LENGTH = 30
 DEFAULT_ADSENSE = {
 	'adClientId' : 'ca-pub-6041601556788047',
 	'adSlot' : {
-		'top_responsible' : '9578335779',
-		'rside_300x600' : '3531802173',
-		'bottom_responsible' : '7962001772'
+		'top_responsible' : '4081808912',
+		'rside_300x600' : '3581872190',
+		'bottom_responsible' : '4723154355'
 	}
 }
 
