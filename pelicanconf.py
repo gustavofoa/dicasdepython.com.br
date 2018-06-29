@@ -39,8 +39,8 @@ EXTRA_PATH_METADATA = {
 }
 
 # Plugins
-# PLUGIN_PATHS = ['./pelican-plugins']
-# PLUGINS = []
+PLUGIN_PATHS = ['./pelican-plugins']
+PLUGINS = []
 
 # Theme
 THEME = 'theme'
@@ -62,6 +62,12 @@ TAG_URL = 'tag/{slug}/'
 TAG_SAVE_AS = 'tag/{slug}/index.html'
 ARCHIVES_URL = 'arquivo/'
 ARCHIVES_SAVE_AS = 'arquivo/index.html'
+TAGS_URL = 'tags/'
+TAGS_SAVE_AS = 'tags/index.html'
+CATEGORIES_URL = 'categories/'
+CATEGORIES_SAVE_AS = 'categorias/index.html'
+AUTHORS_URL = 'autores/'
+AUTHORS_SAVE_AS = 'autores/index.html'
 
 # PAGINATED_DIRECT_TEMPLATES = ['archives']
 PAGINATION_PATTERNS = (
