@@ -1,4 +1,4 @@
-title: Python: Como converter string e date
+title: Python: Como converter string em date
 date: 2018-07-11
 author: Gustavo Furtado de Oliveira Alves
 category: Fundamentos
