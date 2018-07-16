@@ -19,13 +19,13 @@ que assim que possível nós escreveremos um post.
     </div>
     <div class="form-group col-md-6">
         <label for="email">Seu E-mail</label>
-        <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Ex: jose@dicasdejava.com.br">
+        <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Ex: jose@dicasdepython.com.br">
         <small id="emailHelp" class="form-text text-muted">Não vamos compartilhar o seu email com ninguém!</small>
     </div>
   </div>
   <div class="form-group">
     <label for="texto">Descreva a sua dúvida</label>
-    <textarea class="form-control" id="texto" name="message" rows="6" placeholder="Quero aprender a fazer ... em Java."></textarea>
+    <textarea class="form-control" id="texto" name="message" rows="6" placeholder="Quero aprender a fazer ... em Python."></textarea>
   </div>
   <button type="submit" class="btn btn-primary">Enviar</button>
 </form>
