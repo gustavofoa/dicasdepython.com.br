@@ -5,7 +5,7 @@ category: Util
 tags: console, system
 image: /images/logo-python.png
 
-Para limpar a tela do console com python nós precisamos executar o comando  `cls` utilizando a função `system` da biblioteca padrão `os`.
+Para limpar a tela do console com python nós precisamos executar o comando  `clear` utilizando a função `system` da biblioteca padrão `os`.
 
 Além disso, nós podemos forçar o retorno ser "None" para não sobrar um "0" no prompt do python.
 
@@ -13,7 +13,7 @@ Veja no código a seguir.
 
 ```python
 import os
-os.system('cls') or None
+os.system('clear') or None
 ```
 
 ## Resultado
