@@ -5,11 +5,30 @@ category: Frameworks
 tags: Pandas, DataFrame
 image: /images/logo-pandas.jpg
 
-O código abaixo mostra como criar um dataframe vazio utilizando o Pandas.
+Para criar um dataframe com o pandas, primeiro nós temos que importar o pandas.
 
 ```python
 import pandas as pd
+```
 
+Agora, podemos criar o nosso dataframe.
+
+```python
+df = pd.DataFrame()
+df
+```
+
+Saída:
+
+```
+Empty DataFrame
+Columns: []
+Index: []
+```
+
+Além disso, nós podemos já definir as colunas do nosso dataframe na criação.
+
+```python
 COLUNAS = [
     'Coluna-1',
     'Coluna-2',
@@ -18,8 +37,7 @@ COLUNAS = [
 ]
 
 df = pd.DataFrame(columns=COLUNAS)
-
-print(df)
+df
 ```
 
 Saída:
@@ -29,6 +47,7 @@ Empty DataFrame
 Columns: [Coluna-1, Coluna-2, Coluna-3, Coluna-4]
 Index: []
 ```
+
 
 Referências:
 
