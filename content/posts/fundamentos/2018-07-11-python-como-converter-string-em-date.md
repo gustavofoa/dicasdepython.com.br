@@ -34,4 +34,4 @@ Saída:
 
 Referências:
 
-1. [Documentação: datetime](https://docs.python.org/2/library/datetime.html){:target=\_blank}
+1. [Documentação: datetime](https://docs.python.org/3/library/datetime.html){:target=\_blank}
