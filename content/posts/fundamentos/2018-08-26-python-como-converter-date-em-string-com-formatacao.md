@@ -9,7 +9,7 @@ Para converter um objeto date em em python, basta usar a função `strftime` da 
 
 O código abaixo exemplifica a conversão de uma data para string no formato mais utilizado no Brasil, ou seja `99/99/9999`.
 
-> **Importante**: Vamos usar uma data qualquer baseado [neste outro post aqui].(https://dicasdepython.com.br/python-como-converter-string-em-date/){:target=\_blank}.
+> **Importante**: Vamos usar uma data qualquer baseado [neste outro post aqui](https://dicasdepython.com.br/python-como-converter-string-em-date/){:target=\_blank}.
 
 ```python
 from datetime import date, datetime
