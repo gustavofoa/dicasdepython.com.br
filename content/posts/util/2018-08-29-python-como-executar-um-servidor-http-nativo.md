@@ -1,7 +1,7 @@
 title: Python: Como executar um servidor HTTP nativo para servir arquivos de uma pasta local
 date: 2018-08-29
 author: Gustavo Furtado de Oliveira Alves
-category: Fundamentos
+category: Util
 tags: servidor, http
 image: /images/logo-python.png
 
