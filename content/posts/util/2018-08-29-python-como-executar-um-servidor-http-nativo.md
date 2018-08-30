@@ -18,7 +18,7 @@ Para executar um servidor HTTP no python 3.\*, você deve executar o módulo nat
 Veja abaixo o comando para executar o servidor http com o python 3.\*.
 
 ```
-python -m SimpleHTTPServer 8080
+python -m http.server 8080
 ```
 
 No exemplo, estamos criando um servidor HTTP na porta 8080.
