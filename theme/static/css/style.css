@@ -89,3 +89,8 @@ footer {
  	text-align: justify;
  	font-size: 16px;
  }
+ 
+ .fix-bannner {
+    position: fixed;
+    top: 80px;
+}
