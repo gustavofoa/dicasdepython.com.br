@@ -1,4 +1,4 @@
-title: Python: Como copiar um array/list de forma segura
+title: Python: Como copiar um array/list de forma segura (Explicação completa)
 date: 2018-11-15
 author: Gustavo Furtado de Oliveira Alves
 category: Fundamentos
@@ -73,13 +73,13 @@ Existem várias formas de fazer isso, como o método `copy()`.
 
 Como já disse a forma mais simples de copiar um objeto array é através do método `copy`.
 
-## 1 - Método _copy()_ da classe Array
+### 1 - Método _copy()_ da classe Array
 
 Perceba no exemplo abaixo que fizemos a cópia do objeto array da variável `a` e atribuimos esse novo objeto à variável `b` (`b = a.copy()`) e alteração `b[0] = 4` não alterou o array de `a`, somente o array de `b`.
 
 ![Copiando o objeto array e atribuindo o novo endereço a outra variável](/images/copiar-array-seguramente/copiando-array-metodo-copy.gif){:width=100%}
 
-## 2 - Fazendo um filtro trazendo todos os itens de um array com [:]
+### 2 - Fazendo um filtro trazendo todos os itens de um array com [:]
 
 Uma outra ideia é fazer um filtro no array original trazendo todos os registros assim: `b = a[:]`.
 
@@ -88,7 +88,7 @@ Veja:
 
 ![Copiando o objeto array através do filtro [:]](/images/copiar-array-seguramente/copiando-array-atraves-de-filtro.gif){:width=100%}
 
-## 3 - Utilizando o construtor _list(<list>)
+### 3 - Utilizando o construtor _list(<list>)
 
 Neste post estou chamando _list_ do python de array para manter a linguagem comum com outras linguagens de programação,
 visto que o modo literal com colchetes (exemplo [1,2,3]) cria um objeto do tipo _list_.
@@ -104,7 +104,7 @@ Veja o resultado, vou aproveitar o gif pra mostrar o resultado de `type([1,2,3])
 
 ![Copiando o objeto array com o construtor list(<list>)](/images/copiar-array-seguramente/copiando-array-com-construtor-list.gif){:width=100%}
 
-## 4 - Utilizando a biblioteca _copy_
+### 4 - Utilizando a biblioteca _copy_
 
 Por fim, também podemos importar o pacote `copy` e utilizar a função também de nome `copy`. Assim:
 
@@ -118,9 +118,79 @@ O resultado é o mesmo, ou seja, copiamos o objeto _list_ e não só o valor da 
 
 ![Copiando o objeto array com o método copy.copy()](/images/copiar-array-seguramente/copiando-array-com-metodo-copy.gif){:width=100%}
 
+## Copia profunda em array de objetos
 
+Até agora nós falamos de arrays simples de tipos primitivos criando arrays de números inteiros.
 
+Entretanto também podemos criar arrays de objetos, na verdade de endereços de outros objetos ;).
 
-Referências:
+Talvez você já tenha captado o problema em fazer uma cópia simples de um array desse tipo,
+mas se não pegou o problema eu explico. Dê uma olhada na imagem abaixo.
 
-1. [Doc: getattr](https://docs.python.org/3/library/functions.html#getattr){:target=\_blank}
+![Mapeamento de memória de um array de objetos](/images/copiar-array-seguramente/copiando-objeto-array-de-objetos.png){:width=100%}
+
+Quando copiamos um array das 4 formas como falamos acima, nós estamos copiando o objeto array,
+mas se tivermos um array de objetos (endereços para outros objetos), os objetos apontados de dentro do array não são copiados.
+
+Aí a gente cai no mesmo problema do início, mas em um nível mais baixo.
+
+Veja por exemplo o código abaixo.
+
+```python
+class X:
+    y = 0
+    def __init__(self, y):
+        self.y = y
+
+a = [X(y=1), X(y=2), X(y=3)]
+```
+
+Neste ponto, nós criamos três objetos da classe X e um objeto _list_ e apontamos a variável `a` para o objeto _list_.
+
+O que acontece se executarmos o código abaixo?
+
+```python
+b = a.copy()
+b[0].y = 4
+```
+
+Exatamente! Alteramos o valor da variável `y` do mesmo objeto que é apontado por `a[0]`.
+
+Veja:
+
+![Mapeamento de memória de um array de objetos](/images/copiar-array-seguramente/copia-objeto-array-com-mesmos-objetos.gif){:width=100%}
+
+Perceba no final do gif que ao imprimir os objetos `a` e `b` os valores dos arrays (endereços de memória) são os mesmos.
+Ou seja, os mesmos objetos, igual a imagem acima.
+
+Se quisermos que os objetos dos arrays também sejam copiados e assim por diante (se for array de arrays de arrays, ...),
+ou seja uma **cópia profunda**, temos que usar a função `copy.deepcopy(<list>)`.
+
+Claro que esse método custa mais processamento, mas ao final teremos um array completamente copiado de forma segura.
+Assim:
+
+```python
+import copy
+b = copy.deepcopy(a)
+```
+
+Veja o exemplo:
+
+![Exemplo de cópia profunda de array com python](/images/copiar-array-seguramente/copy-deepcopy.gif){:width=100%}
+
+Viu, perceba que o endereço dos objetos internos mudam! Por isso a alteração na variável do objeto `b[0].y`
+não afetou a variável do objeto `a[0].y`, pois `a[0]` e `b[0]` agora apontam para objetos diferentes!
+
+Espero que essa explicação tenha expandido um pouco o seu entendimento sobre orientação a objetos.
+
+Esse comportamento é mais ou menos o mesmo em outras linguagens ditas _orientadas a objetos_ como java, javascript, php, etc.
+
+Comente aí em baixo se tiver alguma dúvida, dica, elogio ou sugestões!
+
+Até a próxima!
+
+##Referências:
+
+1. [Doc: copy](https://docs.python.org/3/library/copy.html){:target=\_blank}
+2. [Doc: array](https://docs.python.org/3/library/array.html){:target=\_blank}
+3. [Doc: list](https://docs.python.org/3/tutorial/datastructures.html#more-on-lists){:target=\_blank}
