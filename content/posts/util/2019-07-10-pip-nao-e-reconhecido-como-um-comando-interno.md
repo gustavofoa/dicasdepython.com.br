@@ -18,7 +18,7 @@ no prompt de comandos, que ele baixa e instala o pacote que você pediu.
 
 Entretanto, pode acontecer que mesmo com o python instalado no seu computador,
 o pip não esteja configurado corretamente. 
-E quando você tenta executar o comando `pip` no prompt de comando e apareça o seguinte erro:
+E quando você tenta executar o comando `pip` no prompt de comando apareça o seguinte erro:
 
 >'pip' não é reconhecido como um comando interno
 ou externo, um programa operável ou um arquivo em lotes.
@@ -84,7 +84,7 @@ Você precisa reiniciar o prompt de comandos para que as alterações de variáv
 
 ## Instalação do pip no Windows
 
-Uma situação que pode acontecer é o pip não estar instalado no com o windows.
+Uma situação que pode acontecer é o pip não estar instalado no seu windows.
 Ou seja, você não encontrou o executável do pip naquela pasta de Scripts que fica dentro da pasta de instalação do python.
 
 Neste caso você precisa instalar o pip alí. E pra isso a gente usa o próprio python.
