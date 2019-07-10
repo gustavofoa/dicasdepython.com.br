@@ -2,7 +2,7 @@ title: [Resolvido] 'python' não é reconhecido como um comando interno
 date: 2018-09-03
 author: Gustavo Furtado de Oliveira Alves
 category: Util
-tags: python, linha de comando, variável de ambiente
+tags: python, linha de comando, variável de ambiente, erro
 image: /images/logo-python.png
 
 Pode acontecer de depois que você instalar o python no seu computador,
@@ -40,6 +40,8 @@ Veja passo a passo como fazer essa configuração:
 ### 5. Clique no botão **Novo** e adicione o caminho da pasta de instalação do python.
 
 ![Adicionando a pasta do python na variável de ambiente PATH](/images/variavel-de-ambiente/adiciona-python-no-PATH.png){:width=100%}
+
+> **Importante**: Pode ser que na sua versão do Windows esta janela seja diferente, apresentando apenas um campo de texto com vários caminhos de pastas separadas por **ponto-e-vírgula (;)**. Neste caso, o que você precisa fazer é justamente **adicionar outro ponto-e-vírgula (;) e o caminho da nova pasta** que você deseja incluir no PATH.
 
 ### 6. REINICIE o prompt de comando!
 
