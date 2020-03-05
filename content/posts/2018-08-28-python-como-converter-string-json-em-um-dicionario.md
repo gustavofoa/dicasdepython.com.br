@@ -1,9 +1,11 @@
-title: Python: Como converter uma string JSON em um dicionário
-date: 2018-08-28
+---
+title: 'Python: Como converter uma string JSON em um dicionário'
+date: '2018-08-28'
 author: Gustavo Furtado de Oliveira Alves
 category: Util
 tags: string, json, converter
 image: /images/logo-python.png
+---
 
 Suponha que você tenha uma String que representa um JSON válido e queira transformar esta String em um objeto (dicionário) no Python.
 

@@ -1,9 +1,11 @@
-title: Python: Como acessar os atributos de objeto da mesma forma como em um dicionário.
-date: 2018-11-14
+---
+title: 'Python: Como acessar os atributos de objeto da mesma forma como em um dicionário.'
+date: '2018-11-14'
 author: Gustavo Furtado de Oliveira Alves
 category: Fundamentos
 tags: dict, object
 image: /images/logo-python.png
+---
 
 Se você já trabalhou com dicionários em python, provavelmente já acessou seus atributos através de strings entre colchetes. Por exemplo:
 

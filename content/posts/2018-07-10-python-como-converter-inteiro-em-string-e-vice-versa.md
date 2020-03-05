@@ -1,9 +1,11 @@
-title: Python: Como converter inteiro em string e vice-versa
-date: 2018-07-10
+---
+title: 'Python: Como converter inteiro em string e vice-versa'
+date: '2018-07-10'
 author: Gustavo Furtado de Oliveira Alves
 category: Fundamentos
 tags: String, inteiro
 image: /images/logo-python.png
+---
 
 Para converter uma variável do tipo inteiro para um texto (string), basta usar a função `str`
 

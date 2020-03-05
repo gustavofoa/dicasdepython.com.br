@@ -1,9 +1,11 @@
-title: Python: Como identificar o dia da semana de uma data
-date: 2018-06-29
+---
+title: 'Python: Como identificar o dia da semana de uma data'
+date: '2018-06-29'
 author: Gustavo Furtado de Oliveira Alves
 category: Util
 tags: Data
 image: /images/logo-python.png
+---
 
 O código abaixo mostra como identificar o dia da semana de uma data em Python
 

@@ -1,9 +1,11 @@
-title: Python: Como copiar um array/list de forma segura (Explicação completa)
-date: 2018-11-15
+---
+title: 'Python: Como copiar um array/list de forma segura (Explicação completa)'
+date: '2018-11-15'
 author: Gustavo Furtado de Oliveira Alves
 category: Fundamentos
 tags: array
 image: /images/logo-python.png
+---
 
 Muito cuidado quando for copiar um array/list em python, pois você pode provocar um grande problema no seu código.
 

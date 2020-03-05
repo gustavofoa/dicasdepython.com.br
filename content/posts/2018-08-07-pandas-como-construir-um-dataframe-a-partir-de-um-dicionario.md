@@ -1,9 +1,11 @@
-title: Pandas: Como construir um DataFrame a partir de um dicionário
-date: 2018-08-07
+---
+title: 'Pandas: Como construir um DataFrame a partir de um dicionário'
+date: '2018-08-07'
 author: Gustavo Furtado de Oliveira Alves
 category: Frameworks
 tags: Pandas, DataFrame
 image: /images/logo-pandas.jpg
+---
 
 Há muitas formas de criar dataframes do pandas e já falamos aqui sobre
 [como criar um DataFrame vazio](https://dicasdepython.com.br/pandas-como-criar-um-dataframe-vazio/){:target=\_blank}.

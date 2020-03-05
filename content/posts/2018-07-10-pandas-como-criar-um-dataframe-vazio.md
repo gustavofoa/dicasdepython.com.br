@@ -1,9 +1,11 @@
-title: Pandas: Como criar um DataFrame vazio
-date: 2018-07-10
+---
+title: 'Pandas: Como criar um DataFrame vazio'
+date: '2018-07-10'
 author: Gustavo Furtado de Oliveira Alves
 category: Frameworks
 tags: Pandas, DataFrame
 image: /images/logo-pandas.jpg
+---
 
 Para criar um dataframe com o pandas, primeiro nós temos que importar o pandas.
 

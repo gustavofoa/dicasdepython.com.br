@@ -1,9 +1,11 @@
-title: Python: Como converter date em string com formatacao
-date: 2018-08-26
+---
+title: 'Python: Como converter date em string com formatacao'
+date: '2018-08-26'
 author: Gustavo Furtado de Oliveira Alves
 category: Fundamentos
 tags: String, date, formatação
 image: /images/logo-python.png
+---
 
 Para converter um objeto date em em python, basta usar a função `strftime` da classe `datetime.date`.
 

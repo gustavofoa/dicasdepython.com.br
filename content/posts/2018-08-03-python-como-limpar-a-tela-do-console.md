@@ -1,9 +1,11 @@
-title: Python: Como limpar a tela do console
-date: 2018-08-03
+---
+title: 'Python: Como limpar a tela do console'
+date: '2018-08-03'
 author: Gustavo Furtado de Oliveira Alves
 category: Util
 tags: console, system
 image: /images/logo-python.png
+---
 
 Para limpar a tela do console com python nós precisamos executar o comando  `clear` utilizando a função `system` da biblioteca padrão `os`.
 

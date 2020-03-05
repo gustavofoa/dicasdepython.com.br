@@ -1,9 +1,11 @@
-title: Python: Como descobrir o tipo de uma variável ou objeto
-date: 2018-07-12
+---
+title: 'Python: Como descobrir o tipo de uma variável ou objeto'
+date: '2018-07-12'
 author: Gustavo Furtado de Oliveira Alves
 category: Fundamentos
 tags: Básico, operadores
 image: /images/logo-python.png
+---
 
 Para saber o tipo de um objeto ou variável, você pode usar a função `type()`do python,
 passando o objeto ou variável como parâmetro.

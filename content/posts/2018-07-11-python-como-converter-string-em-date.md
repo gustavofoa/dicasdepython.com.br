@@ -1,9 +1,11 @@
-title: Python: Como converter string em date
-date: 2018-07-11
+---
+title: 'Python: Como converter string em date'
+date: '2018-07-11'
 author: Gustavo Furtado de Oliveira Alves
 category: Fundamentos
 tags: String, date, datetime
 image: /images/logo-python.png
+---
 
 Para converter uma string em date em python, basta usar a função `strptime` da classe datetime, para obter um objeto datetime e em seguida, obter o objeto date através da função `date()`.
 

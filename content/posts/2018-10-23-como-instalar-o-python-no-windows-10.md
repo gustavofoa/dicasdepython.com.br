@@ -1,9 +1,11 @@
+---
 title: Como instalar o python no Windows 10
-date: 2018-10-23
+date: '2018-10-23'
 author: Gustavo Furtado de Oliveira Alves
 category: Util
 tags: python, instalação, windows
 image: /images/logo-python.png
+---
 
 A instalação do python no Windows 10 é uma das mais simples que já vi.
 

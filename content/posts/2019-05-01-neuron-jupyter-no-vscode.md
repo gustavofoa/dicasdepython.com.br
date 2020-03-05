@@ -1,9 +1,11 @@
-title: Neuron: Executando jupyter notebook dentro do VS Code
-date: 2019-05-01
+---
+title: 'Neuron: Executando jupyter notebook dentro do VS Code'
+date: '2019-05-01'
 author: Gustavo Furtado de Oliveira Alves
 category: Ferramentas
 tags: Pandas, jupyter, vscode, plugin
 image: /images/logo-vscode.png
+---
 
 Se você já trabalhou com _Machine Learning_, muito provavelmente já utilizou
 o _Jupyter Notebook_ para executar seu código python.

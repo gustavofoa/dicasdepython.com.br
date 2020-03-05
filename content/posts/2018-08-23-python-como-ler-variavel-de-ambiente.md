@@ -1,9 +1,11 @@
-title: Python: Como ler variavel de ambiente
-date: 2018-08-23
+---
+title: 'Python: Como ler variavel de ambiente'
+date: '2018-08-23'
 author: Gustavo Furtado de Oliveira Alves
 category: Util
 tags: system
 image: /images/logo-python.png
+---
 
 As variáveis de ambiente do sistema operacional são acessíveis através do dicionário `os.environ` do pacote `os`.
 

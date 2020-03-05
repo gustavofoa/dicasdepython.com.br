@@ -1,9 +1,11 @@
-title: [Resolvido] 'python' não é reconhecido como um comando interno
-date: 2018-09-03
+---
+title: '[Resolvido] 'python' não é reconhecido como um comando interno'
+date: '2018-09-03'
 author: Gustavo Furtado de Oliveira Alves
 category: Util
 tags: python, linha de comando, variável de ambiente, erro
 image: /images/logo-python.png
+---
 
 Pode acontecer de depois que você instalar o python no seu computador,
 você tente executar o comando `python` na linha de comando e apareça o seguinte erro no Windows:

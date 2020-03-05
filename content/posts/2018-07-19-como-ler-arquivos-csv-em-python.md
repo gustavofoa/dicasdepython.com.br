@@ -1,9 +1,11 @@
+---
 title: Como ler arquivos CSV em python
-date: 2018-07-19
+date: '2018-07-19'
 author: Gustavo Furtado de Oliveira Alves
 category: Util
 tags: CSV, IO
 image: /images/logo-python.png
+---
 
 Existem várias formas de ler arquivos CSV em Python. Por padrão o python já oferece um pacote para trabalharmos com arquivos CSV.
 
