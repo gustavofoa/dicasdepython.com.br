@@ -1,9 +1,9 @@
 ---
-title: '[Resolvido] "pip" não é reconhecido como um comando interno'
+title: '[Resolvido] ''pip'' não é reconhecido como um comando interno'
 date: '2019-07-10'
 author: Gustavo Furtado de Oliveira Alves
 category: Util
-tags: pip, linha de comando, variável de ambiente, erro
+tags: 'pip, linha de comando, variável de ambiente, erro'
 image: /images/logo-python.png
 ---
 
