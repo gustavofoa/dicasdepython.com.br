@@ -1,5 +1,5 @@
 ---
-title: '[Resolvido] 'pip' não é reconhecido como um comando interno'
+title: '[Resolvido] \'pip\' não é reconhecido como um comando interno'
 date: '2019-07-10'
 author: Gustavo Furtado de Oliveira Alves
 category: Util
