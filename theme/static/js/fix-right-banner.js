@@ -20,7 +20,7 @@ window.onscroll = function scrollFunction() {
     else
         last_adsense_banner.classList.remove("fix-banner-close-to-footer");
 
-    if(window.pageYOffset+1200 > footer.offsetTop)
+    if(window.pageYOffset+600 > footer.offsetTop)
         last_adsense_banner.classList.remove("fix-banner");
 
 }
