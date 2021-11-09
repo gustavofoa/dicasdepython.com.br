@@ -19,7 +19,7 @@ I18N_TEMPLATES_LANG = 'pt_BR'
 # Your language.
 DEFAULT_LANG = 'pt_BR'
 OG_LOCALE = 'pt_BR'
-LOCALE = ('pt','bra', 'pt_BR')
+LOCALE = ('pt', 'bra', 'pt_BR')
 LANGUAGE = 'pt_BR'
 
 # Feed generation is usually not desired when developing
@@ -31,13 +31,14 @@ AUTHOR_FEED_RSS = None
 
 RELATIVE_URLS = True
 
-STATIC_PATHS = ['pages/extra/CNAME', 'images', 'pages/extra/custom.css', 'admin']
+STATIC_PATHS = ['pages/extra/CNAME', 'images',
+                'pages/extra/custom.css', 'admin']
 
 TEMPLATE_PAGES = {'admin/index.html': 'admin/index.html'}
 
 EXTRA_PATH_METADATA = {
     'pages/extra/CNAME': {'path': 'CNAME'},
-	'pages/extra/custom.css': {'path': 'custom.css'}
+    'pages/extra/custom.css': {'path': 'custom.css'}
 }
 
 # Plugins
@@ -46,12 +47,12 @@ PLUGINS = ['tag_cloud']
 
 # Theme
 THEME = 'theme'
-DISPLAY_CATEGORIES_ON_MENU = True;
+DISPLAY_CATEGORIES_ON_MENU = True
 
 BROWSER_COLOR = '#333'
 ROBOTS = 'index, follow'
 
-#Config slugs
+# Config slugs
 ARTICLE_URL = '{slug}/'
 ARTICLE_SAVE_AS = '{slug}/index.html'
 PAGE_URL = '{slug}/'
@@ -80,24 +81,33 @@ DEFAULT_PAGINATION = 12
 SUMMARY_MAX_LENGTH = 30
 
 DEFAULT_ADSENSE = {
-	'adClientId' : 'ca-pub-6041601556788047',
-	'adSlot' : {
-		'top_responsible' : '4081808912',
-		'rside_300x600' : '3581872190',
-		'bottom_responsible' : '4723154355'
-	}
+    'adClientId': 'ca-pub-6041601556788047',
+    'adSlot': {
+        'top_responsible': '4081808912',
+        'rside_300x600': '3581872190',
+        'bottom_responsible': '4723154355'
+    }
 }
 
 DEFAULT_HOTMART = 'banners/gustavo/banner-hotmart.html'
 
 AUTHORS = {
     'Gustavo Furtado de Oliveira Alves': {
-        'summary': 'É mestre em computação aplicada pelo Institudo Nacional de Pesquisas Espaciais, '+
-                  'Engenheiro da Computação pela ETEP Faculdades e '+
-                  'Técnico em Informática pela Escola Técnica Pandiá Calógeras. '+
-                  'Possui as certificações AWS Architect Associate, AWS Cloud Practitioner, SCJP-6, SCWCD-5 e Agile Scrum Foundation '+
-                  'e trabalha com desenvolvimento de softwares desde 2007.',
+        'summary': 'É mestre em computação aplicada pelo Institudo Nacional de Pesquisas Espaciais, ' +
+        'Engenheiro da Computação pela ETEP Faculdades e ' +
+        'Técnico em Informática pela Escola Técnica Pandiá Calógeras. ' +
+        'Possui as certificações AWS Architect Associate, AWS Cloud Practitioner, SCJP-6, SCWCD-5 e Agile Scrum Foundation ' +
+        'e trabalha com desenvolvimento de softwares desde 2007.',
         'image': 'https://dicasdepython.com.br/images/author-gustavo.jpeg',
+        'adsense': DEFAULT_ADSENSE,
+        'hotmart': DEFAULT_HOTMART
+    },
+    'Marcelo Santos de Oliveira': {
+        'summary': 'Desenvolvedor junior, sempre buscando conhecimento para compartilhar, ' +
+        'Engenheiro Eletricista formado pela Unisal Americana e  ' +
+        'Técnico em Automação pela Etec.  ' +
+        'Trabalha com desenvolvimento de softwares desde 2021.',
+        'image': 'https://media-exp1.licdn.com/dms/image/C4E03AQE02nqcZq6rKA/profile-displayphoto-shrink_800_800/0/1617568739579?e=1640822400&v=beta&t=lQpincJIAjtNJQHu_l9eqVF_w0YEPHWrjsZhoPJwuis',
         'adsense': DEFAULT_ADSENSE,
         'hotmart': DEFAULT_HOTMART
     }
