@@ -3,14 +3,19 @@ title: Como criar uma Virtual Env e um arquivo de requirements.txt no Python
 date: '2021-11-08'
 author: Marcelo Santos de Oliveira
 category: Util
-tags: 'pip, linha de comando,virtualenv , requirements.txt'
+tags: 'pip, linha de comando, virtualenv , requirements.txt'
 image: /images/logo-python.png
 ---
 
 Quando começamos a programar em Python, logo percebemos a grande quantidade de bibliotecas que a linguagem possui para resolver os mais variados problemas.
-A instalação desses pacotes geralmente é muito fácil, e pode ser feita utilizando um gerenciador de pacotes do Python como pip, `pip install nomedopacote`, porem com uma grade quantidade de pacotes e estes podem ter ainda varias versões diferentes visualizamos um problema, para cada projeto que fizermos teremos que instalar todos os pacotes que serão utilizados nesse projeto de forma global.
-Mas esse ainda nem pode ser o maior problema que teríamos, supondo uma aplicação feita em Python 3.7, porem temos instalado a versão do Python 3.8 e assim que tentamos rodar a aplicação localmente ela quebra por incompatibilidade de versões, esse problema também pode se acontecer com os pacotes usados nessa aplicação.
-Nesse cenário notamos que teríamos que gerenciar varias versões de pacotes e do próprio Python na maquina o que poderia rapidamente se transformar em uma grande confusão de versões entre projetos, um verdadeiro caos.
+
+A instalação desses pacotes geralmente é muito fácil, e pode ser feita utilizando um gerenciador de pacotes do Python como pip, `pip install nomedopacote`, porem com uma grande quantidade de pacotes e estes podem ter ainda varias versões diferentes visualizamos um problema, para cada projeto que fizermos teremos que instalar todos os pacotes que serão utilizados nesse projeto de forma global.
+
+Mas esse ainda nem pode ser o maior problema que teríamos, supondo uma aplicação feita em Python 3.7, porem temos instalado a versão do Python 3.8 e assim que tentamos rodar a aplicação localmente ela quebra por incompatibilidade de versões, esse problema também pode acontecer com os pacotes usados nessa aplicação.
+
+Nesse cenário notamos que teríamos que gerenciar varias versões de pacotes e do próprio Python na maquina, o que poderia rapidamente se transformar em uma grande confusão de versões entre projetos, um verdadeiro caos.
+
+## Separando os ambientes com Virtual Env
 
 Para resolver esse problema a solução seria a criação de uma ambiente virtual onde teríamos as versões corretas, dos pacotes instalados e até mesmo a versão correta do Python instalada nesse ambiente e criar um arquivo com todos os pacotes necessários.
 
@@ -36,17 +41,19 @@ Depois de ativado irá indicar que a venv está ativada.
 
 O meu terminal coloca os termos **via nomeDaPasta** indicando que a venv está ativada, isso pode variar um pouco, sendo indicado por (nome_da_venv).
 
-Pronto agora estamos com o ambiente virtual em Python criado e ativado, já podemos instalar os pacotes necessários sem precisar fazer uma instalação global. Para a instalação pode utilizar o gerenciador de pacotes de sua preferencia, nas imagens a seguir eu criei um segundo ambiente virtual e realizei a instalação do pacote Pillow que é utilizado para manipulação de imagens, notem que fiz a instalação de versões diferentes uma em cada venv sem que houvesse problema.
+Pronto agora estamos com o ambiente virtual em Python criado e ativado, já podemos instalar os pacotes necessários sem precisar fazer uma instalação global. Para a instalação pode utilizar o gerenciador de pacotes de sua preferência, nas imagens a seguir eu criei um segundo ambiente virtual e realizei a instalação do pacote Pillow que é utilizado para manipulação de imagens, notem que fiz a instalação de versões diferentes uma em cada venv sem que houvesse problema.
 
 ![Versões diferentes para ambientes diferentes](../images/como-criar-uma%20-virtual-env-e-um-arquivo-de-requirements-txt-no-python/img6.png "Versoes diferentes para ambientes diferentes"){:width=100%}
 
+## Salvando as dependencias com requirements.txt
+
 Pois bem mas ainda temos um problema, depois de instalado todos os pacotes necessários para a sua aplicação, assim que fizer um push para o github gostaríamos que quem fizer um clone do projeto não tenha que instalar todas as dependências manualmente, ou pior, ter que saber qual é exatamente a versão utilizada do pacote a ser instalado. O gerenciador de pacotes *pip* nos traz uma solução pra isso, onde criaremos um arquivo *requirements.txt* para deixar disponível as dependências necessárias para que o seu projeto rode.
 
-Para criarmos o arquivo *requirements.txt* é bem simples, precisamos apenas do comando  `pip freeze > requisrements.txt`.
+Para criarmos o arquivo *requirements.txt* já com todas as dependências do ambiente é bem simples, precisamos apenas do comando  `pip freeze > requisrements.txt`.
 
 ![Criando o arquivo requirements.txt](../images/como-criar-uma%20-virtual-env-e-um-arquivo-de-requirements-txt-no-python/img7.png "Criando o arquivo requirement.txt"){:width=100%}
 
-Pronto, agora já temos o arquivo como os pacotes que são utilizados no projeto, informando também os as versões que foram utilizadas.
+Pronto, agora já temos o arquivo como os pacotes que são utilizados no projeto, informando também as versões que foram utilizadas.
 
 ![Arquivo de controle de pacotes](../images/como-criar-uma%20-virtual-env-e-um-arquivo-de-requirements-txt-no-python/img8.png){:width=100%}
 
