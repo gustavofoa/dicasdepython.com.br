@@ -49,7 +49,7 @@ Pronto agora estamos com o ambiente virtual em Python criado e ativado, já pode
 
 Pois bem mas ainda temos um problema, depois de instalado todos os pacotes necessários para a sua aplicação, assim que fizer um push para o github gostaríamos que quem fizer um clone do projeto não tenha que instalar todas as dependências manualmente, ou pior, ter que saber qual é exatamente a versão utilizada do pacote a ser instalado. O gerenciador de pacotes *pip* nos traz uma solução pra isso, onde criaremos um arquivo *requirements.txt* para deixar disponível as dependências necessárias para que o seu projeto rode.
 
-Para criarmos o arquivo *requirements.txt* já com todas as dependências do ambiente é bem simples, precisamos apenas do comando  `pip freeze > requisrements.txt`.
+Para criarmos o arquivo *requirements.txt* já com todas as dependências do ambiente é bem simples, precisamos apenas do comando  `pip freeze > requirements.txt`.
 
 ![Criando o arquivo requirements.txt](../images/como-criar-uma%20-virtual-env-e-um-arquivo-de-requirements-txt-no-python/img7.png "Criando o arquivo requirement.txt"){:width=100%}
 
