@@ -7,29 +7,27 @@ tags: 'csv, criar arquivo csv'
 image: /images/logo-python.png
 ---
 
-# Criando arquivos CSV em Python
+CSV é um tipo que arquivos onde os dados são separados por vígula, daí vem a sigla da extenção CSV(comma-separated values, valores separados por virgula na tradução).
 
-CSV são um tipo que arquivos onde os dados são separados por vígula, dai vem a sigla da extenção CSV(comma-separated values, valores separados por virgula na tradução).
-
-Apesar de na programação existir outros tipos de arquivos que são mais uteis para se trabalhar, como arquivos JSON ou XML, que já possuem funções em quase todas as linguagens para manipular essse tipos de dados, para um usuário que precisa baixar dados de um sistema esses tipos de arquivos podem acabar não sendo a melhor escolha quando este que necessite colocar esses dados em suas planilhas feitas em excel, que é muito utilizado nas empresas.
+Apesar de na programação existir outros tipos de arquivos que também são úteis para se trabalhar, como arquivos JSON ou XML, que já possuem funções em quase todas as linguagens para manipular essse tipos de dados, para um usuário que precisa baixar dados de um sistema esses tipos de arquivos podem acabar não sendo a melhor escolha quando este necessite colocar esses dados em suas planilhas feitas em excel, que é muito utilizado nas empresas.
 
 Dessa forma o arquivo CSV se torna a melhor escolha para essa situação onde é necessário disponibilizar uma quantidade de dados para que o usuário baixe e coloque em planilhas.
 
 Então vamos mostrar como podemos criar, ler e adicionar itens em um arquivo CSV com python.
 
-O **python** já possue o módulo csv em suas bibliotecas *build-in*, dessa forma tudo que precisamos é importar o módulo no início do código.
+O **python** já possui o módulo csv em suas bibliotecas *build-in*, dessa forma tudo que precisamos é importar o módulo no início do código.
 
 ```python
 import csv
 ```
 
-Agora já temos o o módulo csv para usarmos mais a frente.
+Agora já temos o módulo csv para usarmos mais a frente.
 
 Vamos iniciar com o código onde criaremos o arquivo CSV, para isso iremos usar a função `open()` que é utilizada para abrir arquivos. Essa função pode receber alguns parâmetros, daremos atenção apenas nos necessários para atingirmos nosso objetivo.
 
 Os parâmetros que vamos utilizar da função `open()` são: `file, mode`. File é o path do arquivo ou seja o caminho onde ele está ou será criado. Mode é o modo como o arquivo será aberto, os dois principais modos são 'r' para read(leitura) e 'w' para writer(escrita).
 
-Antes de utilizarmos a função`open()` vamos colocar a palavra `with` que irá nos auxiliar fechando o arquivo depois da execução desta tarefa.
+Antes de utilizarmos a função `open()` vamos colocar a palavra `with` que irá nos auxiliar fechando o arquivo depois da execução desta tarefa.
 
 Dessa forma nosso código está dessa maneira:
 
@@ -38,13 +36,13 @@ import csv
 with open('./teste.csv, 'w') as csvfile:
 ```
 
-Assim estamos abrindo o arquivo teste.csv, na raiz do projeto e atribuindo a ele uma variável csvfile, que vamos usar para manipular o arquivo.
+Assim estamos abrindo o arquivo teste.csv, na raiz do script e atribuindo a ele uma variável csvfile, que vamos usar para manipular o arquivo.
 
-Um detalhe a se observar é que se o arquivo não existir, ele será criado, pois o parâmetro de escrita('w'), tanto abre um arquivo exitente, como cria o arquivo se ele não existir.
+Um detalhe a se observar é que se o arquivo não existir, ele será criado, pois o parâmetro de escrita ('w'), tanto abre um arquivo exitente, como cria o arquivo se ele não existir.
 
-Agora vamos utilizar as algumas funções que o modulo CSV nos disponibiliza, a função `writer()` e a função `writerow()`.
+Agora vamos utilizar algumas funções que o modulo CSV nos disponibiliza, a função `writer()` e a função `writerow()`.
 
-A primera está relacionada ao arquivo criado, permitindo escrever no arquivo que acabamos de criar e irá receber dois paramêtros o a variável com o arquivo, no nosso caso ***csvfile*** e o **delimiter** que é o delimitador do arquivo, nada mais que o caracter que irá separar nos dados no arquivo, nesse caso usaremos a vírgula. Nosso código está assim:
+A primera está relacionada a configuração de forma como vamos compor o arquivo CSV, estamos configurando o nosso `writer`, ou seja, o nosso objeto **escritor**, permitindo escrever no arquivo que acabamos de criar e irá receber dois paramêtros a variável aponta para o arquivo, no nosso caso ***csvfile*** e o **delimiter** que é o delimitador do arquivo, nada mais que o caracter que irá separar nos dados no arquivo, nesse caso usaremos a vírgula. Nosso código está assim:
 
 ```python
 import csv
@@ -66,9 +64,9 @@ Pronto em nosso código já criamos o arquivo e escrevemos dados nesse arquivo.
 
 ![Dados no arquivo criado](../images/como-criar-um-arquivo-csv-no-python/dados-salvos-no-arquivo.png "Dados no arquivo que criamos"){:width=100%}
 
-## Então agora vamos ler o arquivo que acabamos de criar
+## Como ler o arquivo que acabamos de criar
 
-Vamos abri o arquivo assim como fizemos no código anterior,  porem com uma pequena mudança o parâmetro que usamos anteriormente era 'w', porem agora vamos usar o 'r' de read, ou se preferir não precisa nem colocar o parâmetro pois a função open() por padrão já abre o arquivo mo modo de leitura, então temos um o seguinte:
+Vamos abrir o arquivo assim como fizemos no código anterior,  porem com uma pequena mudança o parâmetro que usamos anteriormente era 'w', porem agora vamos usar o 'r' de read, ou se preferir não precisa nem colocar o parâmetro pois a função open() por padrão já abre o arquivo mo modo de leitura, então temos o seguinte:
 
 ```python
 import csv
@@ -91,3 +89,51 @@ Assim teremos essa saída no terminal:
 Pronto já criamos o arquivo e salvamos dados, agora o arquivo pode ser aberto em um editor de planilhas que estará separado de forma correta.
 
 ![Arquivo aberto editor de planilhas](../images/como-criar-um-arquivo-csv-no-python/arquivo-aberto-editor-planilhas.png "Arquivo aberto no editor de planilhas"){:width=100%}
+
+## Melhorando nosso código
+
+Até o momento com os passos anteriores já atingimos nosso objetivo, mas ainda podemos melhorar um pouco mais.
+
+Vamos analizar alguns detalhes do código escrito, quando escrevemos os dados no arquivo CSV, nós criamos o objeto escritor, passamos para ele a variável
+que aponta para o arquivo, configuramos o delimitador e depois escrevemos os dados. Dessa forma:
+
+```python
+csv.writer(csvfile, delimiter=',').writerow(['João', '30' ])
+csv.writer(csvfile, delimiter=',').writerow(['José', '27'])
+csv.writer(csvfile, delimiter=',').writerow(['Pedro', '20'])
+```
+
+Notamos que em cada linha repetimos `csv.writer(csvfile, delimiter=',')`, isso faz que em cada linha estamos criando este objeto, para 3 linhas de dados pode não fazer diferença,
+mas quando estamos pensando em arquivos CVS, são arquivos que podem conter algumas centenas de dados, ou talvez milhares.
+
+Dessa forma um arquivo irá criar centenas ou milhares de objetos, isso irá consumir recursos de processamento, que se traduz em gastos, se criarmos algumas dezenas de arquivos por dia, porque não por hora, começamos a notar que isso pode crescer de forma a gerar gastos consideraveis.
+
+Pensando nisso vamos utilizar um recurso do python e atribuir esse objeto a uma variável, dessa forma nós criamos esse objeto apenas uma vez e depois vamos apenas utilizar o mesmo objeto.
+
+Refatorando nosso código fica assim:
+
+```python
+import csv
+with open('./teste.csv, 'w') as csvfile:
+    writer = csv.writer(csvfile, delimiter=',')
+    writer.writerow(['João', '30' ])
+    writer.writerow(['José', '27'])
+    writer.writerow(['Pedro', '20'])
+```
+
+Seguindo essa linha de pensamento, também podemos melhorar nosso cógigo de escrita, passando o objeto de escrita que está sendo criado a cada iteração do loop `for` para uma variável e apenas usar no loop.
+
+Ficando dessa forma:
+
+```python
+import csv
+with open('./teste.csv) as csvfile:
+    reader = csv.reader(csvfile)
+    for x in reader:
+      print(x)
+```
+
+Pronto! Agora temos nosso código otimimizado para criar arquivos CSVs e consumir menos recursos!
+
+E aí, o que achou deste post? Gostou de aprender a trabalhar com arquivos CSVs no python?
+Deixe aí nos comentários se este post foi útil pra você!
