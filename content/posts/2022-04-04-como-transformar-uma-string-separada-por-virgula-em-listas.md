@@ -7,7 +7,7 @@ tags: 'string, lista, conversão de dados, dados'
 image: /images/logo-python.png
 ---
 
-Conversão de tipos dados é algo comum de se precisar na programação. Uma vez que em empresas com onde temos vários programadores que desenvolvem e dão manutenção em varias partes diferentes de um sistema, algo normal de se acontecer é ter que se manipular os dados para que possamos usar da melhor forma possível.
+Conversão de tipos dados é algo comum de se precisar na programação. Uma vez que em empresas onde temos vários programadores que desenvolvem e dão manutenção em varias partes diferentes de um sistema, algo normal de se acontecer é ter que se manipular os dados para que possamos usar da melhor forma possível.
 
 Em um outro cenário onde sistemas são projetados para consumir dados de APIs externas onde o desenvolvedor não tem nenhum controle sobre os tipos de dados retornados para a requisição feita pelo sistema, fazer a conversão dos dados pode ser um passo fundamental para o bom funcionamento do sistema.
 
