@@ -2,7 +2,7 @@
 title: 'Pandas: Como construir um DataFrame a partir de um dicionário'
 date: '2018-08-07'
 author: Gustavo Furtado de Oliveira Alves
-category: Frameworks
+category: Util
 tags: Pandas, DataFrame
 image: /images/logo-pandas.jpg
 ---

@@ -2,7 +2,7 @@
 title: 'Neuron: Executando jupyter notebook dentro do VS Code'
 date: '2019-05-01'
 author: Gustavo Furtado de Oliveira Alves
-category: Ferramentas
+category: Util
 tags: Pandas, jupyter, vscode, plugin
 image: /images/logo-vscode.png
 ---

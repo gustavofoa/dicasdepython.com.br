@@ -2,7 +2,7 @@
 title: 'Pandas: Como criar um DataFrame vazio'
 date: '2018-07-10'
 author: Gustavo Furtado de Oliveira Alves
-category: Frameworks
+category: Util
 tags: Pandas, DataFrame
 image: /images/logo-pandas.jpg
 ---
